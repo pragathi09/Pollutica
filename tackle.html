@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>breathing</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+.slide {
+height:100%;
+width: 0%;
+top: 0;
+left: 0;
+position: fixed;
+z-index: 1;
+overflow-x: hidden;
+transition: 0.5s;
+background-color: #111;
+padding-top: 60px;
+}
+.slide a {
+margin-left: 50px;
+font-size: 200%;
+color: #fff;
+text-decoration: none;
+ display: block;
+  transition: 0.3s;
+}
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#main {
+font-size: 25px;
+float:left;
+}
+#main:hover {
+cursor:pointer;
+}
+.heading {
+padding-top: 1%;    
+padding-left: 2%;
+background-color: rgba(00,00,00,0.3);
+}
+#butn1 {
+padding: 10px 10px;
+background-color: #008040;
+border:none;
+}
+#thoughts {
+    border:1px solid rgba(0,0,75,0.4);
+    border-radius: 15%;
+    height: 35%;
+    padding-right: 400px;
+    position:fixed;
+    align-items: center;
+    }
+    body{
+        background-image: url(img/pbg1.jpg);
+        background-size: 420%;
+    }
+    #main,#id1{
+        color:white;
+    }
+</style>
+<body>
+   <div id="slidenav" class="slide">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       <a href="home.html">Home</a>
+       <a href="tackle.html">Solution</a>
+       <a href="quiz.html">Quiz</a>
+       <a href="news.html">News</a>
+       <a href="about.html">About</a>
+   </div> 
+<div class="heading">   
+   <div id="main" onclick="openNav()">&#9776;</div>
+   <h1 id="id1" style="margin-top: 0%;">&nbsp;&nbsp;ECO-GRADE</h1></div>
+   <div class="findnew">
+  <center><h1>Solution to pollution</h1></center> 
+   </div>
+    <div class="current">
+   <h2 style="color: black">Air Pollution Solutions: </h2>
+       <h5 style="color:black"> The good news is that there are ways to reduce air pollution:</h5>
+   <h3 style="color: cornsilk">1.Renewable fuel and clean energy production</h3>
+       <p style="color: cornsilk">The most basic solution for air pollution is to move away from fossil fuels, replacing them with alternative energies like solar, wind and geothermal.</p>
+       <h3 style="color: cornsilk">2.Energy conservation and efficiency</h3>
+       <p style="color: cornsilk">Producing clean energy is crucial. But equally important is to reduce our consumption of energy by adopting responsible habits and using more efficient devices.</p>
+       <h3 style="color: cornsilk">3.Eco-friendly transportation</h3>
+       <p style="color: cornsilk">Shifting to electric vehicles and hydrogen vehicles, and promoting shared mobility (i.e carpooling, and public transports) could reduce air pollution.</p>
+       <h3 style="color: cornsilk">4.Green building</h3>
+       <p style="color: cornsilk">From planning to demolition, green building aims to create environmentally responsible and resource-efficient structures to reduce their carbon footprint.</p>
+       
+       <h5 style="color:cornsilk">But enough of the problems.
+Now let’s come up with solutions !</h5>
+   </div>
+       <script>
+function openNav() {
+  document.getElementById("slidenav").style.width = "200px";
+  
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("slidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "25px";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+   <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

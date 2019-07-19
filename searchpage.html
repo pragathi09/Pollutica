@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>pollution tracker</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+<style>
+.slide {
+height:100%;
+width: 0%;
+top: 0;
+left: 0;
+position: fixed;
+z-index: 1;
+overflow-x: hidden;
+transition: 0.5s;
+background-color: #111;
+padding-top: 60px;
+}
+.slide a {
+margin-left: 50px;
+font-size: 200%;
+color: #fff;
+text-decoration: none;
+ display: block;
+  transition: 0.3s;
+}
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#main {
+
+font-size: 25px;
+float:left;
+}
+#main:hover {
+cursor:pointer;
+}
+.heading {
+    padding-top: 1%;
+    padding-left: 2%;
+background-color: rgba(00,00,00,0.3);;
+
+}
+#butn1:hover{
+cursor: pointer;
+}
+#butn1 {
+padding: 10px 10px;
+background-color: rgba(00,00,00,0.3);
+border:none;
+color: white
+}
+    
+    .p1{
+        font-size:200% ;
+        text-align:center;
+        color:black;
+        font-family:cursive;
+    }
+    .c2{
+        font-size:90% ;
+        text-align: left;
+        color:white;
+        font-family: monospace;
+    }
+    #main,#id1{
+        color:white;
+        
+    }
+    .c3{
+        color:black;
+    }
+    .c1{
+        color: black;
+        font-size: 100%;
+    }
+   
+    .c4{
+        font-size: 100%;
+        color:black;
+    }
+    body{
+        background-image: url(img/pbg1.jpg);
+        background-size: 380%;
+    }
+</style>
+<body>
+   <div id="slidenav" class="slide">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="home.html">Home</a>
+       <a href="tackle.html">Solution</a>
+       <a href="quiz.html">Quiz</a>
+       <a href="news.html">News</a>
+       <a href="about.html">About</a>
+   </div>  
+<div class="heading">   
+   <div id="main" onclick="openNav()">&#9776;</div>
+    <h1 id="id1" style="margin-top: 0%;">&nbsp;&nbsp;ECO-GRADE</h1></div>
+    <div class="locs"></div>
+   <div class="findnew">
+  <center>
+      
+      <input style="align-self: center; padding: 8px 8px;" id="id3" placeholder="Enter Location" />
+      
+      <button id="butn1" onclick="findDetails()"><i id="id1" class="fa fa-search"></i></button>
+      
+      
+     <main id="main">
+   <div><a href="info.html"><i id="b1" style="height: 20px;width:20px;text-decoration: none">&#8505;</i></a></div>
+      <p id="city-name" class="c1"></p>
+      <img src="" alt="" id="icon">
+    
+       
+      <div class="c4"></div><p id="pollution" class="p1"></p>
+         
+      <div id="aqi" style="float:left;"></div>
+         
+      <div id="temp" class="c2"></div>
+
+      <div id="humidity-div" class="c2"></div>
+    
+      <div id="pressure-div" class="c2"></div>
+      
+      <div id="wspeed" class="c2"></div>
+    
+  </main>
+       </center>
+   </div>
+    <br /><br />
+    
+  
+   <div id="id1"></div>
+       <script>
+           
+           
+
+function openNav() {
+  document.getElementById("slidenav").style.width = "200px";
+  
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("slidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "25px";
+  document.body.style.backgroundColor = "white";
+}
+    </script>
+    <script type="text/javascript" src="js/jq.js"></script>
+   <script type="text/javascript" src="js/searchpage.js"></script>
+</body>
+</html>

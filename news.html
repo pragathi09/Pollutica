@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>breathing</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+.slide {
+height:100%;
+width: 0%;
+top: 0;
+left: 0;
+position: fixed;
+z-index: 1;
+overflow-x: hidden;
+transition: 0.5s;
+background-color: #111;
+padding-top: 60px;
+}
+.slide a {
+margin-left: 50px;
+font-size: 200%;
+color: #fff;
+text-decoration: none;
+ display: block;
+  transition: 0.3s;
+}
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#main {
+margin-left: 2%;
+margin-top: 1.7%;
+font-size: 25px;
+float:left;
+}
+#main:hover {
+cursor:pointer;
+}
+.heading {
+padding-top:1%;
+ padding-left: 2%;
+background-color: rgba(00,00,00,0.3);
+}
+#butn1 {
+padding: 10px 10px;
+background-color: rgba(0,120,0,0.8);
+border:none;
+}
+#thoughts {
+    border:1px solid rgba(0,0,75,0.4);
+    border-radius: 15%;
+    height: 35%;
+    padding-right: 400px;
+    position:fixed;
+    align-items: center;
+    }
+    body{
+        background-image: url(img/pbg1.jpg);
+        background-size: 380%;
+    }
+    #main,#id1{
+        color:white;
+    }
+    #next:hover{
+        cursor: pointer;
+    }
+</style>
+<body>
+   <div id="slidenav" class="slide">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+       <a href="tackle.html">Solution</a>
+       <a href="quiz.html">Quiz</a>
+       <a href="news.html">News</a>
+       <a href="about.html">About</a>
+   </div>  
+<div class="heading">   
+   <div id="main" style="margin-top: 1px;" onclick="openNav()">&#9776;</div>
+   <h1 id="id1" style="margin-top: 1px;">&nbsp;&nbsp;ECO-GRADE</h1></div>
+    <br />
+   <div class="findnew">
+  <center><h1 style="color: white">News</h1></center> 
+   
+   </div>
+    <br /><br />
+    <center><h2 id="head" style="color:white"></h2></center>
+    <img id="icon" src="" style="margin-left: 28%; width:45%;" />
+   <div id="news1" style="color:white;text-align: center"></div><br>
+   <a id="newslink" style="margin-left: 30%"></a>&nbsp;
+    <button id="next">next article</button>
+       <script>
+function openNav() {
+  document.getElementById("slidenav").style.width = "200px";
+  
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("slidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "25px";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+   <script type="text/javascript" src="js/newsjs.js"></script>
+</body>
+</html>
